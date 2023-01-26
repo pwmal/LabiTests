@@ -1,4 +1,5 @@
-﻿using System;
+﻿//by 007VANO228 for memory
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
