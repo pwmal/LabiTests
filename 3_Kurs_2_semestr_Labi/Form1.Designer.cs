@@ -105,6 +105,7 @@
             this.button17.TabIndex = 39;
             this.button17.Text = "Sqrt(x)";
             this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // button16
             // 
@@ -113,8 +114,9 @@
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(65, 56);
             this.button16.TabIndex = 38;
-            this.button16.Text = "x^2";
+            this.button16.Text = "x^y";
             this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // textBox1
             // 

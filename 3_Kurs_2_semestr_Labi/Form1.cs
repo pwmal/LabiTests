@@ -45,50 +45,90 @@ namespace _3_Kurs_2_semestr_Labi
                 textBox1.Text = "";
             }
         }
+        private void button16_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "")
+            {
+                operation = "x^y";
+                firstNum = Convert.ToSingle(textBox1.Text);
+                textBox2.Text = firstNum + "^y ";
+                textBox1.Text = "";
+            }
+            
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "")
+            {
+                operation = "√";
+                firstNum = Convert.ToSingle(textBox1.Text);
+                textBox2.Text = "√ " + firstNum;
+                textBox1.Text = "";
+            }
+            
+        }
 
         private void button15_Click(object sender, EventArgs e)
         {
             double secondNum;
             double Result;
+            if (operation == "√")
+            {
+                Result = Math.Sqrt(firstNum);
+                textBox1.Text = Convert.ToString(Result);
+                firstNum = Result;
+                textBox2.Text = "";
+            }
+            else
+            {
+                secondNum = Convert.ToSingle(textBox1.Text);
 
-            secondNum = Convert.ToSingle(textBox1.Text);
-
-            if (operation == "+")
-            {
-                Result = (firstNum + secondNum);
-                textBox1.Text = Convert.ToString(Result);
-                firstNum = Result;
-                textBox2.Text = "";
-            }
-            if (operation == "-")
-            {
-                Result = (firstNum - secondNum);
-                textBox1.Text = Convert.ToString(Result);
-                firstNum = Result;
-                textBox2.Text = "";
-            }
-            if (operation == "*")
-            {
-                Result = (firstNum * secondNum);
-                textBox1.Text = Convert.ToString(Result);
-                firstNum = Result;
-                textBox2.Text = "";
-            }
-            if (operation == "/")
-            {
-                if (secondNum == 0)
+                if (operation == "+")
                 {
-                    textBox1.Text = "Нельзя делить на ноль";
-
-                }
-                else
-                {
-                    Result = (firstNum / secondNum);
+                    Result = (firstNum + secondNum);
                     textBox1.Text = Convert.ToString(Result);
                     firstNum = Result;
                     textBox2.Text = "";
                 }
+                if (operation == "-")
+                {
+                    Result = (firstNum - secondNum);
+                    textBox1.Text = Convert.ToString(Result);
+                    firstNum = Result;
+                    textBox2.Text = "";
+                }
+                if (operation == "*")
+                {
+                    Result = (firstNum * secondNum);
+                    textBox1.Text = Convert.ToString(Result);
+                    firstNum = Result;
+                    textBox2.Text = "";
+                }
+                if (operation == "x^y")
+                {
+                    Result = Math.Pow(firstNum, secondNum);
+                    textBox1.Text = Convert.ToString(Result);
+                    firstNum = Result;
+                    textBox2.Text = "";
+                }
+                if (operation == "/")
+                {
+                    if (secondNum == 0)
+                    {
+                        textBox1.Text = "Нельзя делить на ноль";
+
+                    }
+                    else
+                    {
+                        Result = (firstNum / secondNum);
+                        textBox1.Text = Convert.ToString(Result);
+                        firstNum = Result;
+                        textBox2.Text = "";
+                    }
+                }
             }
+            
         }
 
         private void button19_Click(object sender, EventArgs e)
