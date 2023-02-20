@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Laba4/Laba4.csproj
+/Laba4Tests/Laba4Tests.csproj
+/MathTaskClassLibrary/MathTaskClassLibrary.csproj
+/MathTaskClassLibraryTests/MathTaskClassLibraryTests.csproj
