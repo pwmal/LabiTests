@@ -30,6 +30,12 @@ namespace Laba4
         {
             List<Triangle> list = TriangleProvider.GetAll();
             bool x = true;
+
+            if (list.Count == 0)
+            {
+                return false;
+            }
+
             for (int i = 0; i < list.Count; i++)
             {
                 if (TriangleService.IsValidTriangle(list[i].a, list[i].b, list[i].c) == false)
